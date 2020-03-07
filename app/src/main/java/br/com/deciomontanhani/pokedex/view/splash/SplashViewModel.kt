@@ -12,7 +12,7 @@ class SplashViewModel(val pokemonRepository: PokemonRepository) : ViewModel() {
                 messageError.value = ""
             },
             onError = {
-                messageError.value = it?.message
+                messageError.value = it.message
             }
         )
     }

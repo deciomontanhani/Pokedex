@@ -51,7 +51,7 @@ class ListPokemonsActivity : AppCompatActivity() {
 
                     adapter.setOnClickListener {
                         val telaDeDetalhe = Intent(this, FormPokemonActivity::class.java)
-                        telaDeDetalhe.putExtra("POKEMON", it)
+                        telaDeDetalhe.putExtra(FormPokemonActivity.EXTRA_POKEMON, it)
                         Toast.makeText(this, it.nome, Toast.LENGTH_LONG).show()
                         startActivityForResult(telaDeDetalhe, FormPokemonActivity.REQUEST_ALTERAR_DADOS)
                     }

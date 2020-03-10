@@ -5,6 +5,7 @@ import br.com.deciomontanhani.pokedex.api.AuthInterceptor
 import br.com.deciomontanhani.pokedex.api.PokemonRepository
 import br.com.deciomontanhani.pokedex.api.PokemonRepositoryImpl
 import br.com.deciomontanhani.pokedex.api.PokemonService
+import br.com.deciomontanhani.pokedex.view.detail.DetailViewModel
 import br.com.deciomontanhani.pokedex.view.form.FormPokemonViewModel
 import br.com.deciomontanhani.pokedex.view.list.ListPokemonsAdapter
 import br.com.deciomontanhani.pokedex.view.list.ListPokemonsViewModel
@@ -48,6 +49,7 @@ val viewModelModule = module {
     viewModel { SplashViewModel(get()) }
     viewModel { ListPokemonsViewModel(get()) }
     viewModel { FormPokemonViewModel(get()) }
+    viewModel { DetailViewModel(get()) }
 }
 val repositoryModule = module {
     single<PokemonRepository> { PokemonRepositoryImpl(get()) }
